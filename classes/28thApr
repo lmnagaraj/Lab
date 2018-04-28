@@ -1,0 +1,969 @@
+...
+[1, 2]
+>>> a = range(10)
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> for x in a:
+...  x
+...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> for x in a:
+...  if x < 6:
+...   break
+...
+>>> for x in a:
+...  if x < 6:
+...   break
+...  print(x)
+...
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> for x in a:
+...  if x < 6:
+...   print(x)
+...
+0
+1
+2
+3
+4
+5
+>>> for x in a:
+...  if not x == 5:
+...   print(x)
+...
+0
+1
+2
+3
+4
+6
+7
+8
+9
+>>> for x in a:
+...  if x == 5:
+...   next
+...  print(x)
+...
+0
+1
+2
+3
+4
+<built-in function next>
+5
+6
+7
+8
+9
+>>> naga = range(3)
+>>> naga.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'next'
+>>> next(naga)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list object is not an iterator
+>>>
+>>>
+>>>  if x == 5:
+KeyboardInterrupt
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> for x in a:
+...  if x == 5:
+...   next()
+...
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+TypeError: next expected at least 1 arguments, got 0
+>>>
+>>>
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> a = {}
+>>> a
+{}
+>>> type(a)
+<type 'dict'>
+>>> a
+{}
+>>> a['name'] = 'nagarajan'
+>>> a
+{'name': 'nagarajan'}
+>>> a[1] = 2
+>>> a
+{1: 2, 'name': 'nagarajan'}
+>>> a['class'] = 'python'
+>>> a
+{1: 2, 'name': 'nagarajan', 'class': 'python'}
+>>> a['lesson'] = 'python'
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'python'}
+>>> a['class'] = 'ruby'
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 0
+>>> a[1]
+2
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a['name']
+'nagarajan'
+>>>
+>>>
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> for x in a:
+...  x
+...
+1
+'lesson'
+'name'
+'class'
+>>> dir(a)
+['__class__', '__cmp__', '__contains__', '__delattr__', '__delitem__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'has_key', 'items', 'iteritems', 'iterkeys', 'itervalues', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values', 'viewitems', 'viewkeys', 'viewvalues']
+>>> a.keys()
+[1, 'lesson', 'name', 'class']
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a.items()
+[(1, 2), ('lesson', 'python'), ('name', 'nagarajan'), ('class', 'ruby')]
+>>> a = 1, 2
+>>> a
+(1, 2)
+>>> type(a)
+<type 'tuple'>
+>>> b = [1, 2]
+>>> a
+(1, 2)
+>>> b
+[1, 2]
+>>> a[0]
+1
+>>> a.items()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'tuple' object has no attribute 'items'
+>>> a
+(1, 2)
+>>> a = {1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a.items()
+[(1, 2), ('lesson', 'python'), ('name', 'nagarajan'), ('class', 'ruby')]
+>>> for x in a.items():
+...  x
+...
+(1, 2)
+('lesson', 'python')
+('name', 'nagarajan')
+('class', 'ruby')
+>>> naga = a.items()
+>>> naga
+[(1, 2), ('lesson', 'python'), ('name', 'nagarajan'), ('class', 'ruby')]
+>>> for x in naga:
+...  x
+...
+(1, 2)
+('lesson', 'python')
+('name', 'nagarajan')
+('class', 'ruby')
+>>> for x in naga:
+...  x[0]
+...
+1
+'lesson'
+'name'
+'class'
+>>> for x in naga:
+...  x[1]
+...
+2
+'python'
+'nagarajan'
+'ruby'
+>>> naga
+[(1, 2), ('lesson', 'python'), ('name', 'nagarajan'), ('class', 'ruby')]
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> for x in a:
+... for x in a.items:
+  File "<stdin>", line 2
+    for x in a.items:
+      ^
+IndentationError: expected an indented block
+>>> for x in a.item:
+...     if x==nagarajan:
+...             print(X)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'item'
+>>>             prin(x)
+  File "<stdin>", line 1
+    prin(x)
+    ^
+IndentationError: unexpected indent
+>>> for x in a.item:
+...     print(x)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'item'
+>>> dir(a)
+['__class__', '__cmp__', '__contains__', '__delattr__', '__delitem__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'has_key', 'items', 'iteritems', 'iterkeys', 'itervalues', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values', 'viewitems', 'viewkeys', 'viewvalues']
+>>> for x in a.items:
+...     print(x)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object is not iterable
+>>> a = {1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> for x in a.items:
+...     print(x)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object is not iterable
+>>> a['name'] = 'nagarajan'
+>>> a = {1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> for x in a.items:
+...     if a['name']=='nagarajan':
+...             print(a)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'builtin_function_or_method' object is not iterable
+>>>             print(x)
+  File "<stdin>", line 1
+    print(x)
+    ^
+IndentationError: unexpected indent
+>>> a = {1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> dummy = a.items()
+>>> dummy
+[(1, 2), ('lesson', 'python'), ('name', 'nagarajan'), ('class', 'ruby')]
+>>> for x in dummy:
+...  x
+...
+(1, 2)
+('lesson', 'python')
+('name', 'nagarajan')
+('class', 'ruby')
+>>> for x in dummy:
+...  x[1]
+...
+2
+'python'
+'nagarajan'
+'ruby'
+>>> for x in dummy:
+...  if x[1] == 'nagarajan':
+...   x
+...
+('name', 'nagarajan')
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> for x in a:
+...  x
+...
+1
+'lesson'
+'name'
+'class'
+>>> for x in a.items():
+...  x
+...
+(1, 2)
+('lesson', 'python')
+('name', 'nagarajan')
+('class', 'ruby')
+>>> a
+{1: 2, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a.has_key('nagarajan')
+False
+>>> a.has_key('name')
+True
+>>> dir(a)
+['__class__', '__cmp__', '__contains__', '__delattr__', '__delitem__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'has_key', 'items', 'iteritems', 'iterkeys', 'itervalues', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values', 'viewitems', 'viewkeys', 'viewvalues']
+>>> a.keys()
+[1, 'lesson', 'name', 'class']
+>>> a.values()
+[2, 'python', 'nagarajan', 'ruby']
+>>> a.pop()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: pop expected at least 1 arguments, got 0
+>>> a.popitem()
+(1, 2)
+>>> a
+{'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a
+{'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 0
+>>> a[0] = range(3)
+>>> a
+{0: [0, 1, 2], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0]
+[0, 1, 2]
+>>> a[0][1]
+1
+>>> a[0]
+[0, 1, 2]
+>>> a[1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 1
+>>> a[0]
+[0, 1, 2]
+>>> dir(a[0])
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> a[0]
+[0, 1, 2]
+>>> naga = range(3)
+>>> naga
+[0, 1, 2]
+>>> naga.append('lakshmi')
+>>> a
+{0: [0, 1, 2], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> naa
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'naa' is not defined
+>>> naga
+[0, 1, 2, 'lakshmi']
+>>> a
+{0: [0, 1, 2], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0].append("lakshmi")
+>>>
+>>> a
+{0: [0, 1, 2, 'lakshmi'], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a.append(10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'append'
+>>> a
+{0: [0, 1, 2, 'lakshmi'], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0]
+[0, 1, 2, 'lakshmi']
+>>> a[0][1]['name'] = naga
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object does not support item assignment
+>>> a[0][1]['name'] = 'naga'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object does not support item assignment
+>>> a[0][1]
+1
+>>> a[0][1] = rane(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'rane' is not defined
+>>> a[0][1] = range(3)
+>>> a
+{0: [0, [0, 1, 2], 2, 'lakshmi'], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0][1][0] = range(3)
+>>> a[0][1][0][1]
+1
+>>> a[0][1][0][1]['naga'] = 'raj'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object does not support item assignment
+>>> a[0][1][0][1]
+1
+>>> a
+{0: [0, [[0, 1, 2], 1, 2], 2, 'lakshmi'], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0]
+[0, [[0, 1, 2], 1, 2], 2, 'lakshmi']
+>>> a[0]['naga'] = { 2:4}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list indices must be integers, not str
+>>> a[0]
+[0, [[0, 1, 2], 1, 2], 2, 'lakshmi']
+>>> a
+{0: [0, [[0, 1, 2], 1, 2], 2, 'lakshmi'], 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a[0]
+[0, [[0, 1, 2], 1, 2], 2, 'lakshmi']
+>>> a['a'] = { 1:2}
+>>> a['a'][1] = { 1:2}
+>>> a['a'][1][0] = { 1:2}
+>>> a
+{0: [0, [[0, 1, 2], 1, 2], 2, 'lakshmi'], 'a': {1: {0: {1: 2}, 1: 2}}, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> len(a0
+...
+KeyboardInterrupt
+>>> len(a)
+5
+>>> a[0]
+[0, [[0, 1, 2], 1, 2], 2, 'lakshmi']
+>>> a[0][1]
+[[0, 1, 2], 1, 2]
+>>> a[0][1][0]
+[0, 1, 2]
+>>> a[0][1][0][1]
+1
+>>> a
+{0: [0, [[0, 1, 2], 1, 2], 2, 'lakshmi'], 'a': {1: {0: {1: 2}, 1: 2}}, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> a['a']
+{1: {0: {1: 2}, 1: 2}}
+>>> len(a['a'])
+1
+>>> a['a']
+{1: {0: {1: 2}, 1: 2}}
+>>> a['a'][1]
+{0: {1: 2}, 1: 2}
+>>> len(a['a'][1])
+2
+>>> a['a'][1]
+{0: {1: 2}, 1: 2}
+>>> a['a'][1][0]
+{1: 2}
+>>> a['a'][1][0][1]
+2
+>>> a
+{0: [0, [[0, 1, 2], 1, 2], 2, 'lakshmi'], 'a': {1: {0: {1: 2}, 1: 2}}, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>>
+>>>
+>>> a[name]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'name' is not defined
+>>> a['name']
+'nagarajan'
+>>> a[name]=a['name']
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'name' is not defined
+>>> name = 'name'
+>>> a[name]
+'nagarajan'
+>>> a
+{0: [0, [[0, 1, 2], 1, 2], 2, 'lakshmi'], 'a': {1: {0: {1: 2}, 1: 2}}, 'lesson': 'python', 'name': 'nagarajan', 'class': 'ruby'}
+>>> import json
+>>> json.loads(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+>>> json.dumps(a)
+'{"0": [0, [[0, 1, 2], 1, 2], 2, "lakshmi"], "a": {"1": {"0": {"1": 2}, "1": 2}}, "lesson": "python", "name": "nagarajan", "class": "ruby"}'
+>>>
+>>>
+>>>
+>>> naga = json.dumps(a)
+>>> naga
+'{"0": [0, [[0, 1, 2], 1, 2], 2, "lakshmi"], "a": {"1": {"0": {"1": 2}, "1": 2}}, "lesson": "python", "name": "nagarajan", "class": "ruby"}'
+>>> type(naga)
+<type 'str'>
+>>> naga[0]
+'{'
+>>> a = 'asfkgjakjgh'
+>>> a[0]
+'a'
+>>> a[1]
+'s'
+>>>
+>>> a = 10
+>>> b = 20
+>>> a + b
+30
+>>> a = 20
+>>> a
+20
+>>> b
+20
+>>> a + b
+40
+>>> a = 30
+>>> b = 30
+>>> a + b
+60
+>>> def add(a, b):
+...  print( a + b)
+...
+>>> add
+<function add at 0x10ec12e60>
+>>> add( 10, 10)
+20
+>>> add( 20, 20)
+40
+>>> def naga(a, b):
+...  print( a + b)
+...
+>>> naga(4786, 34785)
+39571
+>>> def dummy:
+  File "<stdin>", line 1
+    def dummy:
+             ^
+SyntaxError: invalid syntax
+>>> def dummy():
+...  print('hi asjghak ')
+...
+>>> dummy
+<function dummy at 0x10ec1d050>
+>>> dummy()
+hi asjghak
+>>> def lak(a,b)
+  File "<stdin>", line 1
+    def lak(a,b)
+               ^
+SyntaxError: invalid syntax
+>>> def lak(a,b):
+...     print(a*b)
+...
+>>> lak(10,20)
+200
+>>> o=lak(a,b)
+900
+>>> o
+>>> a = lak(10,20)
+200
+>>> a
+>>> lak(10,20)
+200
+>>> def lak(a,b):
+...  c = a * b
+...
+KeyboardInterrupt
+>>>
+>>>
+>>> a = 10
+>>> a % 2
+0
+>>> a = 9
+>>> a % 2
+1
+>>> def lak(a,b):
+...  c = a * b
+...  if c % 2 == 0:
+...   print(c)
+...
+...
+>>> lak(10, 10)
+100
+>>> lak(3, 3)
+>>> def lak(a,b):
+...  c = a * b
+...  if c % 2 == 0:
+...   print('yes it is a even number")
+  File "<stdin>", line 4
+    print('yes it is a even number")
+                                   ^
+SyntaxError: EOL while scanning string literal
+>>> def lak(a,b):
+...  c = a * b
+...  if c % 2 == 0:
+...   print('yes it is a even number')
+...   print(c)
+...  else:
+...   print('it is a odd number')
+...   print(c)
+...
+>>> lak(3, 3)
+it is a odd number
+9
+>>> lak(4, 4)
+yes it is a even number
+16
+>>> a = range(10)
+>>> a
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> for x in a:
+...  x
+...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> a = range(10, 20)
+>>> a
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+>>>
+>>>
+>>> a
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+>>> for x in a:
+...  print(x)
+...
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+>>> a = range(23, 50)
+>>> a
+[23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+>>> for x in a:
+...  x
+...
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+>>> def printingthelist(a):
+...
+KeyboardInterrupt
+>>> def printingthelist(a):
+...  print(printingthelist)
+...
+>>> for x in a:
+...  x
+...
+KeyboardInterrupt
+>>> def printingthelist(a):
+...  for x in a:
+...   print(x)
+...
+>>> naga = range(5)
+>>> naga
+[0, 1, 2, 3, 4]
+>>> nagarintingthelist(naga)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nagarintingthelist' is not defined
+>>> printingthelist(naga)
+0
+1
+2
+3
+4
+>>> range(10, 20)
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+>>> def abinaya(a, b):
+...  list_abi = range(a, b)
+...  for x in list_abi:
+...   x
+...
+>>> abinaya(10, 20)
+>>>
+>>> def abinaya(a, b):
+...  list_abi = range(a, b)
+...  for x in list_abi:
+...   print(x)
+...
+>>> abinaya(10, 20)
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+>>> abinaya(10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: abinaya() takes exactly 2 arguments (1 given)
+>>> def abinaya(a, b):
+...  list_abi = range(a, b+1)
+...  for x in list_abi:
+...   print(x)
+...
+>>> abinaya(10, 20)
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+>>> def abinaya(a= naga, b):
+...  print(a)
+...
+  File "<stdin>", line 1
+SyntaxError: non-default argument follows default argument
+>>> def abinaya(a, b=naga):
+...  print(a)
+...
+>>> def abinaya(a, b=naga):
+...  print(a, b)
+...
+>>> abinaya('sajghajksh')
+('sajghajksh', [0, 1, 2, 3, 4])
+>>> naga
+[0, 1, 2, 3, 4]
+>>> del naga
+>>> def abinaya(a, b=naga):
+...  print(a, b)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'naga' is not defined
+>>> def abinaya(a, b="naga"):
+...  print(a, b)
+...
+>>> naga
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'naga' is not defined
+>>> abinaya('sajghajksh')
+('sajghajksh', 'naga')
+>>> abinaya('sajghajksh', b='lakshmi')
+('sajghajksh', 'lakshmi')
+>>>
+>>>
+>>>
+>>> def add(a, b):
+...  print(a + b)
+...
+>>> add(10, 20)
+30
+>>> c = add(10, 20)
+30
+>>> c
+>>> def add(a, b):
+...  return(a + b)
+...
+>>> c = add(10, 20)
+>>> c
+30
+>>> def add(10, 20):
+  File "<stdin>", line 1
+    def add(10, 20):
+             ^
+SyntaxError: invalid syntax
+>>> def add(x, y):
+...  return(x + y)
+...  print('al;ksjghasjkg')
+...
+>>> c = add(10, 20)
+>>> c
+30
+>>> def add(x, y):
+...  print('al;ksjghasjkg')
+...  return(x + y)
+...
+>>> c = add(10, 20)
+al;ksjghasjkg
+>>> c
+30
+>>> a={1:2,'name':'Abi','age':24}
+>>> a
+{1: 2, 'age': 24, 'name': 'Abi'}
+>>> a['age']
+24
+>>> for x in a.items():
+...  print x
+...
+(1, 2)
+('age', 24)
+('name', 'Abi')
+>>> for x in a.items():
+...  if x[1] == 'abi':
+...
+  File "<stdin>", line 3
+
+    ^
+IndentationError: expected an indented block
+>>> for x in a.items():
+...  if x[1] == 'abi':
+...   print x
+...
+>>> x
+('name', 'Abi')
+>>> for x in a.items():
+...  if x[1] == 'abi':
+...   print (x)
+...
+>>> def add(x,y):
+...  print (x+y)
+...
+>>> add(45,45)
+90
+>>> a
+{1: 2, 'age': 24, 'name': 'Abi'}
+>>> a.items()
+[(1, 2), ('age', 24), ('name', 'Abi')]
+>>> b=range(1,30)
+>>> b
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> b[:26]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+>>> b[:]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> b
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> b[:7]
+[1, 2, 3, 4, 5, 6, 7]
+>>> for q in b:
+...
+  File "<stdin>", line 2
+
+    ^
+IndentationError: expected an indented block
+>>> for q in b:
+...  if q<7:
+...
+  File "<stdin>", line 2
+    if q<7:
+          ^
+IndentationError: expected an indented block
+>>> for q in b:
+...  print q
+... if q<6:
+  File "<stdin>", line 3
+    if q<6:
+     ^
+SyntaxError: invalid syntax
+>>> for q in b:
+...  print q
+...   if q<6
+  File "<stdin>", line 3
+    if q<6
+    ^
+IndentationError: unexpected indent
+>>> for q in b:
+...  print q
+... if q<6
+  File "<stdin>", line 3
+    if q<6
+     ^
+SyntaxError: invalid syntax
+>>> for q in b:
+...  print q
+... if q<6:
+  File "<stdin>", line 3
+    if q<6:
+     ^
+SyntaxError: invalid syntax
+>>> b
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> a= range(3)
+>>> a
+[0, 1, 2]
+>>> a[0]=range(3)
+>>> a[1]=range(3)
+>>> a
+[[0, 1, 2], [0, 1, 2], 2]
+>>> a[2]=range(3)
+>>> a
+[[0, 1, 2], [0, 1, 2], [0, 1, 2]]
+>>> for q in a:
+...  sum q
+  File "<stdin>", line 2
+    sum q
+        ^
+SyntaxError: invalid syntax
+>>> for q in a:
+...  sum(q)
+...  print q
+...
+3
+[0, 1, 2]
+3
+[0, 1, 2]
+3
+[0, 1, 2]
+>>> for q in a:
+...  print q
+...  sum(q)
+...
+[0, 1, 2]
+3
+[0, 1, 2]
+3
+[0, 1, 2]
+3
+>>> a
+[[0, 1, 2], [0, 1, 2], [0, 1, 2]]
+>>> b
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> c=range(12)
+>>> c
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+>>> for num in c:
+...  print c
+... if (c==6)
+  File "<stdin>", line 3
+    if (c==6)
+     ^
+SyntaxError: invalid syntax
+>>> for num in c:
+...  print num
+... if num <6:
+  File "<stdin>", line 3
+    if num <6:
+     ^
+SyntaxError: invalid syntax
+>>> b
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+>>> c
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+>>> for num in c:
+...  print num
+...  if num == 6:
+...   break
+...
+0
+1
+2
+3
+4
+5
+6
